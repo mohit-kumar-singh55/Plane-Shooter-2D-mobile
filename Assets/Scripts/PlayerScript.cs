@@ -9,11 +9,31 @@ public class PlayerScript : MonoBehaviour {
     float maxX;
     float minY;
     float maxY;
+    public GameObject explosion;
+    public PlayerHealthBar playerHealthBar;
+
+    public float health = 20f;
+    float fillAmount = 1f;
+    float damage = 0;
+
+    public GameObject damageEffect;
+    public CoinCount coinCount;
 
     // Start is called before the first frame update
     void Start()
     {
         FindBoundaries();
+        damage = fillAmount / health;
+    }
+
+    void DamageHealthBar()
+    {
+        if (health > 0)
+        {
+            health -= 1;
+            fillAmount -= damage;
+            playerHealthBar.SetAmount(fillAmount);
+        }
     }
 
     // clamping player b/w the boundaries
@@ -38,5 +58,28 @@ public class PlayerScript : MonoBehaviour {
         float newYPos = Mathf.Clamp(transform.position.y + deltaY, minY, maxY);
 
         transform.position = new Vector2(newXPos, newYPos);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("EnemyBullet"))
+        {
+            DamageHealthBar();
+            Destroy(collision.gameObject);
+            GameObject effectDamage = Instantiate(damageEffect, collision.transform.position, Quaternion.identity);
+            Destroy(effectDamage, 0.2f);
+            if (health <= 0)
+            {
+                Destroy(gameObject);
+                GameObject blast = Instantiate(explosion, transform.position, Quaternion.identity);
+                Destroy(blast, 2f);
+            }
+        }
+
+        if (collision.CompareTag("Coin"))
+        {
+            Destroy(collision.gameObject);
+            coinCount.AddCoin();
+        }
     }
 }
