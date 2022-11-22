@@ -19,6 +19,8 @@ public class PlayerScript : MonoBehaviour {
     public GameObject damageEffect;
     public CoinCount coinCount;
 
+    public GameController gameController;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -70,6 +72,7 @@ public class PlayerScript : MonoBehaviour {
             Destroy(effectDamage, 0.2f);
             if (health <= 0)
             {
+                gameController.GameOver();
                 Destroy(gameObject);
                 GameObject blast = Instantiate(explosion, transform.position, Quaternion.identity);
                 Destroy(blast, 2f);

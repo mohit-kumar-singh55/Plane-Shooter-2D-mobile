@@ -10,7 +10,7 @@ public class CoinCount : MonoBehaviour
 
     public void AddCoin()
     {
-        count++;
+        count += 1;
         coinCountText.text = count.ToString();
     }
 }

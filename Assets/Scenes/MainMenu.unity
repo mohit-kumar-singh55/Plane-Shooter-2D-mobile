@@ -123,6 +123,74 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &207865975
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6599363415735554962, guid: ac246326cc6860048baed63e273c27fe, type: 3}
+      propertyPath: m_Name
+      value: LevelLoader
+      objectReference: {fileID: 0}
+    - target: {fileID: 6599363415735554964, guid: ac246326cc6860048baed63e273c27fe, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6599363415735554964, guid: ac246326cc6860048baed63e273c27fe, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 86.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6599363415735554964, guid: ac246326cc6860048baed63e273c27fe, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 192.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6599363415735554964, guid: ac246326cc6860048baed63e273c27fe, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6599363415735554964, guid: ac246326cc6860048baed63e273c27fe, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6599363415735554964, guid: ac246326cc6860048baed63e273c27fe, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6599363415735554964, guid: ac246326cc6860048baed63e273c27fe, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6599363415735554964, guid: ac246326cc6860048baed63e273c27fe, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6599363415735554964, guid: ac246326cc6860048baed63e273c27fe, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6599363415735554964, guid: ac246326cc6860048baed63e273c27fe, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6599363415735554964, guid: ac246326cc6860048baed63e273c27fe, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ac246326cc6860048baed63e273c27fe, type: 3}
+--- !u!114 &207865976 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6599363415735554965, guid: ac246326cc6860048baed63e273c27fe, type: 3}
+  m_PrefabInstance: {fileID: 207865975}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9604045b08e6dfd4d83253c61f24dd11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &211734228
 GameObject:
   m_ObjectHideFlags: 0
@@ -285,7 +353,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 371783110}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 207865976}
+        m_TargetAssemblyTypeName: LevelLoader, Assembly-CSharp
+        m_MethodName: ExitGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &371783110
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -782,7 +862,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1751785944}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 207865976}
+        m_TargetAssemblyTypeName: LevelLoader, Assembly-CSharp
+        m_MethodName: Reload
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1751785944
 MonoBehaviour:
   m_ObjectHideFlags: 0
