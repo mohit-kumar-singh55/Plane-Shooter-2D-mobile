@@ -246,6 +246,7 @@ MonoBehaviour:
   health: 20
   damageEffect: {fileID: 1584216586237427474, guid: ebd230a515f62234e99f1d839b02ed7c, type: 3}
   coinCount: {fileID: 0}
+  gameController: {fileID: 0}
 --- !u!114 &7769590456443661124
 MonoBehaviour:
   m_ObjectHideFlags: 0
